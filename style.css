@@ -1,0 +1,102 @@
+:root{
+    --background-color: beige;
+    --secondary-color: #efdff7;
+    --unchange: black;
+    --hover-color: #d8a3f3;
+    --inverse: black;
+}
+body{
+    background-color: var(--background-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    transition: ease 1.2s;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 0;
+    margin: 0;
+    width: auto;
+}
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.grid{
+    position:relative;
+    display: grid;
+    grid: repeat(3, 1fr) / repeat(3, 1fr);
+    width: 300px;
+    height: 300px;
+    border: 3px solid var(--inverse);
+    border-radius: 5px;
+    padding: 0;
+}
+.box{
+    border: 1px solid;
+    background-color: var(--secondary-color);
+    cursor: pointer;
+    border: 3px solid var(--unchange);
+    transition: transform 0.2s ease-in, background-color 0.2s ease-in; /* Smooth hover transition */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+.box:hover{
+    background-color: var(--hover-color);
+    transform: scale(1.03);
+    /* transition: ease-in 0.2s; */
+}
+svg{
+    cursor: pointer;
+}
+#sun{
+    display: none;
+}
+#dark:hover{
+    transform: translateY(-10px);
+    transform: rotate(-360deg);
+    transition: ease-in 0.6s;
+}
+.other{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    width: 100%;
+}
+#restart:hover{
+    transform: rotate(-360deg);
+    transition: ease 1.2s;
+}
+.win-line {
+    position: absolute;
+    background-color: red;
+    height: 5px;
+    width: 0;
+    transform-origin: center;
+    transition: width 0.5s ease, transform 0.5s ease;
+    z-index: 10;
+}
+
+.dark-mode{
+    --background-color: beige;
+    --secondary-color: #efdff7;
+    --unchange: black;
+    --inverse: white;
+    --hover-color: #d8a3f3;
+    --tw-bg-opacity: 1;
+    --background-color: rgb(17 0 31 / var(--tw-bg-opacity));
+    color: white;
+    transition: ease 1.2s;
+}
